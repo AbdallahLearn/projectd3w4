@@ -9,14 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let btnLogout = document.getElementById('btn-logout')
 
-btnLogout.addEventListener('click', function(){
+function logout(){
     window.location.href = 'index.html';
-})
+}
 
-let btnAddArticle = document.getElementById('add-article')
-btnAddArticle.addEventListener('click', function(){
+// let btnAddArticle = document.getElementsByClassName('add-article')
+function moveLink(){
     window.location.href = 'add-article.html'
-})
+}
+
 
 
 
