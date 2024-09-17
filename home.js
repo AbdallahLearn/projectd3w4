@@ -96,3 +96,14 @@ fetch(url)
     .catch(error => {
         console.error('Error fetching data:', error);
     });
+
+
+let btnMenu = document.getElementById('toggle')
+btnMenu.addEventListener('click', function(){
+    let ulList = document.getElementById('ul-list-mobile')
+    if (ulList.style.display === 'block') {
+        ulList.style.display = 'none';
+    } else {
+        ulList.style.display = 'block';
+    }
+})
