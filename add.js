@@ -6,26 +6,26 @@ const btnSend = document.getElementById('send');
 const imgUrl = document.getElementById('url-id')
 
 
-// Add event listener to the Send button
+
 btnSend.addEventListener('click', () => {
-    // Get values from input fields
+    
     const subjectValue = inputSubject.value.trim();
     const textValue = inputText.value.trim();
 
-    // Basic validation
+    
     if (subjectValue === '' || textValue === '') {
         alert('Please fill in both fields');
         return;
     }
 
-    // Prepare data for sending
+   
     const data = {
         img: imgUrl.value,
         title: subjectValue,
         text: textValue
     };
 
-    // Send POST request
+   
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
@@ -36,7 +36,6 @@ btnSend.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // Optionally clear the input fields or show a success message
         inputSubject.value = '';
         inputText.value = '';
         alert('Article added successfully!');
