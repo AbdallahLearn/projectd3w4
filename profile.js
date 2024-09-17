@@ -77,3 +77,7 @@ btnMenu.addEventListener('click', function(){
         ulList.style.display = 'block';
     }
 })
+
+function logout(){
+    window.location.href = 'index.html';
+}

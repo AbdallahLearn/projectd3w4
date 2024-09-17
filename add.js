@@ -45,3 +45,18 @@ btnSend.addEventListener('click', () => {
         alert('An error occurred. Please try again.');
     });
 });
+
+
+let btnMenu = document.getElementById('toggle')
+btnMenu.addEventListener('click', function(){
+    let ulList = document.getElementById('ul-list-mobile')
+    if (ulList.style.display === 'block') {
+        ulList.style.display = 'none';
+    } else {
+        ulList.style.display = 'block';
+    }
+})
+
+function logout(){
+    window.location.href = 'index.html';
+}
